@@ -22,14 +22,6 @@ body {
   margin: auto;
 }
 
-.disc-tray::before {
-  position: relative;
-  content:"";
-  background-color: #0b130b;
-  height: 50px;
-  width: 100px;
-}
-
 .computer-gap {
   content:"";
   position: relative;

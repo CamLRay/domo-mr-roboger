@@ -36,18 +36,16 @@ function numberRange(input) {
  }
 
  $(document).ready(function() {
-
   $("#user-input").submit(function(event) {
     event.preventDefault();
-
-
-
-    let userNum = $("#number").val().trim();
+    let userNum = $("#number").val().trim().replaceAll('"',"");
     let userName = $("#name").val().trim();
     let numArray;
     let song;
     let speed;
-    if (parseInt(userNum) < 50) {
+    if (parseInt(userNum) < 10) {
+      speed = 50;
+    } else if (parseInt(userNum) < 50) {
       speed = 20;
     } else if (parseInt(userNum) >= 50 && parseInt(userNum) < 100) {
       speed = 10;
@@ -65,6 +63,10 @@ function numberRange(input) {
       numArray = numberRange(parseInt(userNum.slice(1)));
       song = mrRoboger(numArray, userName)[parseInt(userNum.slice(1))];
       $("#song").text("Mr. Roboger: " + song);
+    } else if (userNum === "help" || userNum === "hlp") {
+      typingEffect('type a Hindu-Arabic number to make me sing. Type "menu" for a list of commands', 20);
+    } else if (userNum === "menu" || userNum === "commands") {
+      typingEffect('Type an exclamation point "!" before the number to reverse the song. Type a question mark "?" before the number to see the song at that number. Set your user to have me include your name in the song.');
     } else if (isNaN(userNum)) {
       typingEffect("Mr. Roboger: Error! Beep! Boop! Please enter a number neighbor. Example: 25");
     } else {
@@ -74,7 +76,4 @@ function numberRange(input) {
     }
   });
 
-  $("#legend-button").click(function() {
-    $("#legend").toggleClass("hidden");
-  });
  });
