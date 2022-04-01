@@ -24,6 +24,19 @@ function numberRange(input) {
   return songArray;
  }
 
+ function typingEffect(text) {
+  let passage;
+   for (let i = 0; i <= text.length; i++) {
+    $("#song").text("Mr. Roboger Sings: ");
+     setTimeout(function() {
+      passage = text.slice(0,i);
+      $("#song").text("Mr. Roboger Sings: " + passage)
+     }, 5000);
+    
+   }
+
+ }
+
  $(document).ready(function() {
 
   $("#user-input").submit(function(event) {
@@ -43,11 +56,11 @@ function numberRange(input) {
       song = mrRoboger(numArray, userName)[parseInt(userNum.slice(1))];
       $("#song").text("Mr. Roboger Sings: " + song);
     } else if (isNaN(userNum)) {
-      $("#song").text("Mr. Roboger: Error! Beep! Boop! Please enter a number neighbor.");
+      $("#song").text("Mr. Roboger: Error! Beep! Boop! Please enter a number neighbor. Example: 25");
     } else {
       numArray = numberRange(parseInt(userNum));
       song = mrRoboger(numArray, userName).join(" ");
-      $("#song").text("Mr. Roboger Sings: " + song);
+      typingEffect(song);
     }
   });
 
