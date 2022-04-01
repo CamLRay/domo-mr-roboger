@@ -24,14 +24,14 @@ function numberRange(input) {
   return songArray;
  }
 
- function typingEffect(text) {
+ function typingEffect(text, speed) {
   let passage;
    for (let i = 0; i <= text.length; i++) {
-    $("#song").text("Mr. Roboger Sings: ");
+    $("#song").text("Mr. Roboger: ");
      setTimeout(function() {
       passage = text.slice(0,i);
-      $("#song").html("Mr. Roboger Sings: " + passage + "")
-     }, i * 50);
+      $("#song").html("Mr. Roboger: " + passage + "")
+     }, i * speed);
    }
  }
 
@@ -39,26 +39,38 @@ function numberRange(input) {
 
   $("#user-input").submit(function(event) {
     event.preventDefault();
+
+
+
     let userNum = $("#number").val().trim();
     let userName = $("#name").val().trim();
     let numArray;
     let song;
+    let speed;
+    if (parseInt(userNum) < 50) {
+      speed = 20;
+    } else if (parseInt(userNum) >= 50 && parseInt(userNum) < 100) {
+      speed = 10;
+    } else {
+      speed = 0;
+    }
+
     if (userNum === "") {
       $("#song").text("");
     } else if (userNum[0] === "!" && parseInt(userNum.slice(1))) {
       numArray = numberRange(parseInt(userNum.slice(1)));
       song = mrRoboger(numArray, userName).reverse().join(" ");
-      $("#song").text("Mr. Roboger Sings: " + song);
+      typingEffect(song, speed);
     } else if (userNum[0] === "?" && parseInt(userNum.slice(1))) {
       numArray = numberRange(parseInt(userNum.slice(1)));
       song = mrRoboger(numArray, userName)[parseInt(userNum.slice(1))];
-      $("#song").text("Mr. Roboger Sings: " + song);
+      $("#song").text("Mr. Roboger: " + song);
     } else if (isNaN(userNum)) {
-      $("#song").text("Mr. Roboger: Error! Beep! Boop! Please enter a number neighbor. Example: 25");
+      typingEffect("Mr. Roboger: Error! Beep! Boop! Please enter a number neighbor. Example: 25");
     } else {
       numArray = numberRange(parseInt(userNum));
       song = mrRoboger(numArray, userName).join(" ");
-      typingEffect(song);
+      typingEffect(song, speed);
     }
   });
 
