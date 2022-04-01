@@ -15,7 +15,7 @@ body {
   margin-right: auto;
   align-items: center;
   justify-content: center;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .disc-tray {
@@ -26,29 +26,29 @@ body {
 }
 
 
-
 .computer-gap {
   content:"";
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  background-color: #615e59;
+  background-color: #ffffff00;
   width: 693.3px;
   height: 5px;
 }
 
 .computer {
   display: flex;
+  background-image: linear-gradient(#e9c699, #645848);
   background-color: tan;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 5px;
+  border-radius: 10px;
   width: 693.3px;
   height: 200px;
 }
 
 .result {
-  background-color: #0b130b;
+  background-image: radial-gradient(#192b19, #0e1b0e) ;
   border-radius: 10px;
   width: 666.6px;
   height: 500px;
@@ -81,7 +81,7 @@ input {
   border-right-style: hidden;
   border-left-style: hidden;
   border-bottom-style: hidden;
-  background-color: #0b130b;
+  background-color: #00000000;
 }
 
 input:focus {
