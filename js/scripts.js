@@ -24,7 +24,6 @@ function numberRange(input) {
   return songArray;
  }
 
-
  $(document).ready(function() {
 
   $("#user-input").submit(function(event) {
@@ -35,16 +34,16 @@ function numberRange(input) {
     let song;
     if (userNum === "") {
       $("#song").text("");
-    } else if (isNaN(parseInt(userNum.slice(1)))) {
-      $("#song").text("Mr. Roboger Says: Error please enter a number. Example: 17");
-    } else if (userNum[0] === "!") {
+    } else if (userNum[0] === "!" && parseInt(userNum.slice(1))) {
       numArray = numberRange(parseInt(userNum.slice(1)));
       song = mrRoboger(numArray, userName).reverse().join(" ");
       $("#song").text("Mr. Roboger Sings: " + song);
-    } else if (userNum[0] === "?") {
+    } else if (userNum[0] === "?" && parseInt(userNum.slice(1))) {
       numArray = numberRange(parseInt(userNum.slice(1)));
       song = mrRoboger(numArray, userName)[parseInt(userNum.slice(1))];
       $("#song").text("Mr. Roboger Sings: " + song);
+    } else if (isNaN(userNum)) {
+      $("#song").text("Mr. Roboger: Error! Beep! Boop! Please enter a number neighbor.");
     } else {
       numArray = numberRange(parseInt(userNum));
       song = mrRoboger(numArray, userName).join(" ");
