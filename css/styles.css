@@ -14,6 +14,12 @@ body {
   border-radius: 5px;
 }
 
+.disc-tray {
+  background-color: #0b130b;
+  height: 5px;
+  width: 250px;
+  margin: auto;
+}
 .computer-gap {
   content:"";
   position: relative;
@@ -25,6 +31,7 @@ body {
 }
 
 .computer {
+  display: flex;
   background-color: tan;
   margin-left: auto;
   margin-right: auto;
