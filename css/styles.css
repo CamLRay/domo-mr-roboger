@@ -1,5 +1,8 @@
+html {
+  height: 100%;
+}
 body {
-  background-color: #a7a297 ;
+  background-image: linear-gradient(#a7a297, #57544d);
 }
 
 .monitor {
@@ -27,7 +30,7 @@ body {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  background-color: #a7a297;
+  background-color: #615e59;
   width: 693.3px;
   height: 5px;
 }
@@ -51,6 +54,23 @@ body {
   font-family: 'IBM Plex Mono', monospace;
   padding: 2%;
   overflow-y: auto;
+}
+
+.desk {
+  display:flex;
+  height: 115px;
+}
+
+.desk-top {
+  background-image: linear-gradient(#612f13, #241208);
+  height: 50px;
+}
+
+.legs {
+  background-image: linear-gradient(#252525, #a39f95);
+  width: 75px;
+  height: 100%;
+  margin: auto;
 }
 
 input {
