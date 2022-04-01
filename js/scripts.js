@@ -24,4 +24,4 @@ function numberRange(input) {
 
 
 
-console.log(mrRoboger([0, 1, 2, 3, 4, 5, 12, 15, 321]));
+console.log(mrRoboger(numberRange("15")));

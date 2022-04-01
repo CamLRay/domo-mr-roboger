@@ -33,3 +33,8 @@ Expected Output: [0, "Beep!", "Boop!", 3, 4, 5, "Boop!", "Beep!"]
 
 Test: 'From an array of numbers it should replace numbers containing 3 with "Won't you be my neighbor?" numbers with 2 & 1 "Boop!" and numbers containing only 1 with "Beep!"'
 Code: mrRoboger([0, 1, 2, 3, 4, 5, 12, 15, 321]);
+Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?, 4, 5, "Boop!", "Beep!", "Won't you be my neighbor?]
+
+Test: 'If use inputs name concat the name to the end of the phrase "Won't you be my neighbor?"'
+Code: mrRoboger([3], "Cameron");
+Expected Output: ["Won't you be my neighbor, Cameron?"]
