@@ -44,7 +44,9 @@ function numberRange(input) {
       song = mrRoboger(numArray, userName).join(" ");
     }
     $("#song").text("Mr. Roboger Sings: " + song);
-   
+  });
 
+  $("#legend-button").click(function() {
+    $("#legend").toggleClass("hidden");
   });
  });
