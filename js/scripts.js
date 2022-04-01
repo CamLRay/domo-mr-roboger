@@ -66,7 +66,7 @@ function numberRange(input) {
     } else if (userNum === "help" || userNum === "hlp") {
       typingEffect('type a Hindu-Arabic number to make me sing. Type "menu" for a list of commands', 20);
     } else if (userNum === "menu" || userNum === "commands") {
-      typingEffect('Type an exclamation point "!" before the number to reverse the song. Type a question mark "?" before the number to see the song at that number. Set your user to have me include your name in the song.');
+      typingEffect('</p><p> !: Type an exclamation point "!" before the number to reverse the song.</p> <p>?: Type a question mark "?" before the number to see the song at that number.</p> <p> Set your user to have me include your name in the song.');
     } else if (isNaN(userNum)) {
       typingEffect("Mr. Roboger: Error! Beep! Boop! Please enter a number neighbor. Example: 25");
     } else {
