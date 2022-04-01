@@ -23,6 +23,10 @@ Expected Output: [0, 1, 2, 3, 4, 5]
 
 Describe mrRoboger()
 
-Test: "From an array of numbers it should replace numbers containing 1 with "Beep!"
+Test: "From an array of numbers it should replace numbers containing 1 with 'Beep!'"
 Code: mrRoboger([0, 1, 2, 3, 4, 5, 15]);
 Expected Output: [0, "Beep!", 2, 3, 4, 5, "Beep!"]
+
+Test: 'From an array of numbers it should replace numbers containing 2 with "Boop!" and numbers containing only 1 with "Beep!"'
+Code: mrRoboger([0, 1, 2, 3, 4, 5, 12, 15]);
+Expected Output: [0, "Beep!", "Boop!", 3, 4, 5, "Boop!", "Beep!"]
