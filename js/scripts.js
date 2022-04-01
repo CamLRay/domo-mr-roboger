@@ -30,11 +30,9 @@ function numberRange(input) {
     $("#song").text("Mr. Roboger Sings: ");
      setTimeout(function() {
       passage = text.slice(0,i);
-      $("#song").text("Mr. Roboger Sings: " + passage)
-     }, 5000);
-    
+      $("#song").html("Mr. Roboger Sings: " + passage + "")
+     }, i * 50);
    }
-
  }
 
  $(document).ready(function() {
