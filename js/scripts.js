@@ -7,3 +7,4 @@ function numberRange(input) {
   return numbers;
 }
 console.log(numberRange("5"));
+

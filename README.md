@@ -20,3 +20,9 @@ Describe numberRange()
 Test: "It should return a range of numbers from 0 to the user's inputted number"
 Code: numberRange("5");
 Expected Output: [0, 1, 2, 3, 4, 5]
+
+Describe mrRoboger()
+
+Test: "From an array of numbers it should replace numbers containing 1 with "Beep!"
+Code: mrRoboger([0, 1, 2, 3, 4, 5, 15]);
+Expected Output: [0, "Beep!", 2, 3, 4, 5, "Beep!"]
