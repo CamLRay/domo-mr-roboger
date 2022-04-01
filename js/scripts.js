@@ -36,6 +36,9 @@ function numberRange(input) {
     if(userNum[0] === "!") {
       numArray = numberRange(parseInt(userNum.slice(1)));
       song = mrRoboger(numArray, userName).reverse().join(" ");
+    } else if (userNum[0] === "?") {
+      numArray = numberRange(parseInt(userNum.slice(1)));
+      song = mrRoboger(numArray, userName)[parseInt(userNum.slice(1))];
     } else {
       numArray = numberRange(parseInt(userNum));
       song = mrRoboger(numArray, userName).join(" ");
