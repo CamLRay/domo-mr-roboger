@@ -49,6 +49,7 @@ body {
   color: #01af0f;
   font-family: 'IBM Plex Mono', monospace;
   padding: 2%;
+  overflow-y: auto;
 }
 
 input {
@@ -64,6 +65,10 @@ input:focus {
   outline: none;
 }
 
+input::placeholder {
+  color: #01af0f;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -72,4 +77,20 @@ input::-webkit-inner-spin-button {
 
 .hidden {
   display: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: tan;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
