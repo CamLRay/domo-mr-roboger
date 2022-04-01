@@ -7,6 +7,7 @@ body {
   background-color: tan;
   width: 693.3px;
   height: 520px;
+  margin-top: 5vh;
   margin-left: auto;
   margin-right: auto;
   align-items: center;
@@ -47,7 +48,26 @@ body {
   height: 500px;
   color: #01af0f;
   font-family: 'IBM Plex Mono', monospace;
-  padding: 1%;
+  padding: 2%;
+}
+
+input {
+  color: #01af0f;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  background-color: #0b130b;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .hidden {

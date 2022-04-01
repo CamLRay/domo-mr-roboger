@@ -11,14 +11,8 @@
   <title>Mr. Roboger's Neighborhood</title>
 </head>
 <body>
-  <div class="container">
-    <h1>Hello Neighbor</h1>
-    <form id="user-input">
-      <input type="text" name="number" id="number" placeholder="Input a Number ie. 15">
-      <input type="text" name="name" id="name" placeholder="Optional: Your Name">
-      <button type="submit" class="btn btn-success">Greet Mr. Roboger</button>
-    </form>
-    <button type="button" id="legend-button" class="btn btn-success">Command Legend</button>
+  <div class="legend hidden">
+    <button type="button" id="legend-button">Command Legend</button>
     <div class="hidden" id="legend">
       <h4>Commands</h4>
       <ul>
@@ -29,6 +23,14 @@
   </div>
   <div class="monitor">
     <div class="result">
+    <form id="user-input">
+      <label for="name">What is your name?</label>
+      <input type="text" name="name" id="name" autocomplete="off">
+      <br>
+      <label for="number">Please enter a number:</label>
+      <input type="text" name="number" id="number" autocomplete="off" autofocus>
+      <button type="submit" class="hidden"></button>
+    </form>
       <p id="song"></p>
     </div>
   </div>
