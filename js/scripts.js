@@ -8,7 +8,7 @@ function numberRange(input) {
 }
 
  function mrRoboger(array, name) {
-  let song = array.map(function(number) {
+  let songArray = array.map(function(number) {
     if (number.toString().includes(3) && name !== "" && name !== undefined) {
       return "Won't you be my neighbor, " + name + "?"
     } else if (number.toString().includes(3)){
@@ -21,9 +21,20 @@ function numberRange(input) {
       return number;
     }
   });
-  return song;
+  return songArray;
  }
 
 
+ $(document).ready(function() {
 
-console.log(mrRoboger(numberRange("15"), "Cam"));
+  $("#user-input").submit(function(event) {
+    event.preventDefault();
+    let userNum = parseInt($("#number").val());
+    let userName = $("#name").val().trim();
+    let numArray = numberRange(userNum);
+    let song = mrRoboger(numArray, userName).join(" ");
+
+    $("#song").text("Mr. Roboger Sings: " + song);
+
+  });
+ });
