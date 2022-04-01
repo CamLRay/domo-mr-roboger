@@ -6,5 +6,18 @@ function numberRange(input) {
   }
   return numbers;
 }
-console.log(numberRange("5"));
 
+ function mrRoboger(array) {
+  let song = array.map(function(number) {
+    if(number.toString().includes(1)) {
+      return "Beep!";
+    } else {
+      return number;
+    }
+  });
+  return song;
+ }
+
+
+
+console.log(mrRoboger([0, 1, 2, 3, 4, 5, 15]));
