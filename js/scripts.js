@@ -29,21 +29,27 @@ function numberRange(input) {
 
   $("#user-input").submit(function(event) {
     event.preventDefault();
-    let userNum = $("#number").val();
+    let userNum = $("#number").val().trim();
     let userName = $("#name").val().trim();
     let numArray;
     let song;
-    if(userNum[0] === "!") {
+    if (userNum === "") {
+      $("#song").text("");
+    } else if (isNaN(parseInt(userNum.slice(1)))) {
+      $("#song").text("Mr. Roboger Says: Error please enter a number. Example: 17");
+    } else if (userNum[0] === "!") {
       numArray = numberRange(parseInt(userNum.slice(1)));
       song = mrRoboger(numArray, userName).reverse().join(" ");
+      $("#song").text("Mr. Roboger Sings: " + song);
     } else if (userNum[0] === "?") {
       numArray = numberRange(parseInt(userNum.slice(1)));
       song = mrRoboger(numArray, userName)[parseInt(userNum.slice(1))];
+      $("#song").text("Mr. Roboger Sings: " + song);
     } else {
       numArray = numberRange(parseInt(userNum));
       song = mrRoboger(numArray, userName).join(" ");
+      $("#song").text("Mr. Roboger Sings: " + song);
     }
-    $("#song").text("Mr. Roboger Sings: " + song);
   });
 
   $("#legend-button").click(function() {
