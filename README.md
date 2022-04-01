@@ -1,5 +1,6 @@
 Mr. Roboger's Neighborhood Rules
 
+
 1. Numbers containing a 1 replace all digits with the string "Beep!"
  ie. 109 becomes "Beep!"
 
@@ -10,3 +11,5 @@ Mr. Roboger's Neighborhood Rules
  ie 305 becomes "Won't you be my neighbor?"
 
 4.  if a number contains the number above it replace with the higher string ie 32 becomes "Won't you be my Neighbor?"
+
+5. return a range of numbers from 0 to the users inputed number.
