@@ -14,6 +14,7 @@ body {
 .monitor {
   display: flex;
   background-color: tan;
+  position: relative;
   width: 693.3px;
   height: 520px;
   margin-top: 5vh;
@@ -21,7 +22,18 @@ body {
   margin-right: auto;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.monitor::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: tan;
+  height: 520px;
+  width: 50px;
+  margin-left: 108%;
+  border-radius: 0 10px 10px 0;
 }
 
 .disc-tray {
@@ -64,7 +76,6 @@ body {
 
 .computer-gap {
   content:"";
-  position: relative;
   margin-left: auto;
   margin-right: auto;
   background-color: #ffffff00;
@@ -78,9 +89,21 @@ body {
   background-color: tan;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 10px;
+  border-radius: 10px 0px 0px 10px;
   width: 693.3px;
   height: 200px;
+  position: relative;
+}
+
+.computer::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(#e9c699, #645848);
+  height: 200px;
+  width: 50px;
+  margin-left: 100.3%;
+  border-radius: 0px 10px 10px 0px;
 }
 
 .result {
@@ -147,7 +170,8 @@ input::-webkit-inner-spin-button {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: grey;
+  background: #a79175;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
