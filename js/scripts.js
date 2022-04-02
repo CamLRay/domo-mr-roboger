@@ -27,7 +27,7 @@ function numberRange(input) {
 
 //  UI Logic
 
- function typingEffect(text, speed) {
+  function typingEffect(text, speed) {
   let passage;
    for (let i = 0; i <= text.length; i++) {
      setTimeout(function() {
@@ -37,12 +37,18 @@ function numberRange(input) {
    }
  }
 
- function onLoad() {
-   $("#song").text("");
-   $("#song").removeClass("center");
-   $("#user-input").removeClass("hidden",5000);
-   $("#number").focus();
- }
+  function onLoad() {
+    $("#song").text("");
+    $("#song").removeClass("center");
+    $("#user-input").removeClass("hidden",5000);
+    $("#number").focus();
+  }
+
+  function roboTrolly() {
+    $(".trolly").removeClass("hidden").animate({left: '780px'},5000).queue(function(){
+      $(".trolly").addClass("hidden").animate({left: '0'}).dequeue();
+    });
+  }
 
  $(document).ready(function() {
   $("#user-input").submit(function(event) {
@@ -64,6 +70,7 @@ function numberRange(input) {
 
     if (userNum === "") {
       $("#song").text("");
+      $(".trolly").addClass("hidden");
     } else if (userNum[0] === "!" && parseInt(userNum.slice(1))) {
       numArray = numberRange(parseInt(userNum.slice(1)));
       song = mrRoboger(numArray, userName).reverse().join(" ");
@@ -75,8 +82,11 @@ function numberRange(input) {
     } else if (userNum === "help" || userNum === "hlp") {
       typingEffect('Type a Hindu-Arabic number to make me sing. Type "menu" for a list of commands', 20);
     } else if (userNum === "menu" || userNum === "commands") {
-      typingEffect('</p><p> !: Type an exclamation point "!" before the number to reverse the song.</p> <p>?: Type a question mark "?" before the number to see the song at that number.</p> <p> Set your user to have me include your name in the song.');
-    } else if (isNaN(userNum)) {
+      typingEffect('</p><p>!: Type an exclamation point "!" before the number to reverse the song.</p> <p>?: Type a question mark "?" before the number to see the song at that number.</p><p>Set your user to have me include your name in the song.</p><p>Type trolly to say hi to the neighborhood trolly');
+    } else if (userNum.toLowerCase() === "trolly") {
+      typingEffect("Mr. Robogers: Hello Mr. RoboTrolly", 50);
+      roboTrolly();
+    }else if (isNaN(userNum)) {
       typingEffect("Mr. Robogers: Error neighbor! Beep! Boop! Please enter a number. Example: 25");
     } else {
       numArray = numberRange(parseInt(userNum));
@@ -85,7 +95,6 @@ function numberRange(input) {
     }
   });
 
-  
   typingEffect("Hello there neighbor...", 70);
-  setTimeout(onLoad, 4000); 
+  setTimeout(onLoad, 3500); 
  });

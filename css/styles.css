@@ -115,6 +115,7 @@ body {
   font-family: 'IBM Plex Mono', monospace;
   padding: 2%;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .center {
@@ -180,4 +181,13 @@ input::-webkit-inner-spin-button {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.trolly {
+  position: relative;
+  background-color: #01af0f;
+  height: 50px;
+  width: 100px;
+  margin-left:-20%;
+  margin-top: 55%;
 }
