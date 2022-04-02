@@ -5,6 +5,12 @@ body {
   background-image: linear-gradient(#a7a297, #57544d);
 }
 
+#sticky-note {
+  position: absolute;
+  width: 150px;
+  margin-left: 75%;
+}
+
 .monitor {
   display: flex;
   background-color: tan;
@@ -25,6 +31,12 @@ body {
   margin: auto;
 }
 
+/* .disc-tray::before {
+  content: "Neighbor";
+  background-color: #a1c0a1;
+  height: 50px;
+  width: 50px;
+} */
 
 .computer-gap {
   content:"";
