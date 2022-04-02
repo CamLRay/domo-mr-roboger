@@ -33,6 +33,14 @@ Mr. Robogers' Computer is a simple web application that allows a user to enter a
 ## Known Bugs
 * No Known Bugs
 
+## List of Commands
+* "!" before the number reverses the song.
+* "?" before the number shows the song at that number.
+* "menu" displays a menu of commands.
+* "help" gives basic instructions.
+* "trolly" runs an animation of a trolly.
+
+
 ## Mr. Roboger's Neighborhood Rules
 1. Return a range of numbers from 0 to the users inputed number.
 

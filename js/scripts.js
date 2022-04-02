@@ -79,12 +79,12 @@ function numberRange(input) {
       numArray = numberRange(parseInt(userNum.slice(1)));
       song = mrRoboger(numArray, userName)[parseInt(userNum.slice(1))];
       typingEffect(song, speed);
-    } else if (userNum === "help" || userNum === "hlp") {
-      typingEffect('Type a Hindu-Arabic number to make me sing. Type "menu" for a list of commands', 20);
-    } else if (userNum === "menu" || userNum === "commands") {
-      typingEffect('</p><p>!: Type an exclamation point "!" before the number to reverse the song.</p> <p>?: Type a question mark "?" before the number to see the song at that number.</p><p>Set your user to have me include your name in the song.</p><p>Type trolly to say hi to the neighborhood trolly');
+    } else if (userNum.toLowerCase() === "help" || userNum.toLowerCase() === "hlp") {
+      typingEffect('Type a Hindu-Arabic number to make me sing. Type "menu" for a list of commands.', 20);
+    } else if (userNum.toLowerCase() === "menu" || userNum.toLowerCase() === "commands") {
+      typingEffect('</p><p>!: Type an exclamation point "!" before the number to reverse the song.</p> <p>?: Type a question mark "?" before the number to see the song at that number.</p><p>Set your user to have me include your name in the song.</p><p>trolly: Type "trolly" to say hi to the neighborhood trolly.');
     } else if (userNum.toLowerCase() === "trolly") {
-      typingEffect("Mr. Robogers: Hello Mr. RoboTrolly", 50);
+      typingEffect("Mr. Robogers: Hello Mr. RoboTrolly.", 50);
       roboTrolly();
     }else if (isNaN(userNum)) {
       typingEffect("Mr. Robogers: Error neighbor! Beep! Boop! Please enter a number. Example: 25");
