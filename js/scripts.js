@@ -30,12 +30,18 @@ function numberRange(input) {
  function typingEffect(text, speed) {
   let passage;
    for (let i = 0; i <= text.length; i++) {
-    $("#song").text("Mr. Roboger: ");
      setTimeout(function() {
       passage = text.slice(0,i);
-      $("#song").html("Mr. Roboger: " + passage + "")
+      $("#song").html(passage)
      }, i * speed);
    }
+ }
+
+ function onLoad() {
+   $("#song").text("");
+   $("#song").removeClass("center");
+   $("#user-input").removeClass("hidden",5000);
+   $("#number").focus();
  }
 
  $(document).ready(function() {
@@ -71,11 +77,15 @@ function numberRange(input) {
     } else if (userNum === "menu" || userNum === "commands") {
       typingEffect('</p><p> !: Type an exclamation point "!" before the number to reverse the song.</p> <p>?: Type a question mark "?" before the number to see the song at that number.</p> <p> Set your user to have me include your name in the song.');
     } else if (isNaN(userNum)) {
-      typingEffect("Mr. Roboger: Error! Beep! Boop! Please enter a number neighbor. Example: 25");
+      typingEffect("Mr. Robogers: Error neighbor! Beep! Boop! Please enter a number. Example: 25");
     } else {
       numArray = numberRange(parseInt(userNum));
       song = mrRoboger(numArray, userName).join(" ");
-      typingEffect(song, speed);
+      typingEffect("Mr. Robogers sings: "+ song, speed);
     }
   });
+
+  
+  typingEffect("Hello there neighbor...", 70);
+  setTimeout(onLoad, 4000); 
  });
