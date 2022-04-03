@@ -5,12 +5,6 @@ body {
   background-image: linear-gradient(#a7a297, #57544d);
 }
 
-#sticky-note {
-  position: absolute;
-  width: 150px;
-  margin-left: 75%;
-}
-
 .monitor {
   display: flex;
   background-color: tan;
@@ -34,6 +28,13 @@ body {
   width: 50px;
   margin-left: 108%;
   border-radius: 0 10px 10px 0;
+}
+
+#sticky-note {
+  position: absolute;
+  width: 150px;
+  left: 100px;
+  top: 38px;
 }
 
 .disc-tray {
@@ -106,6 +107,22 @@ body {
   border-radius: 0px 10px 10px 0px;
 }
 
+#train-logo-two {
+  position: absolute;
+  right: -50.6px;
+  bottom: 470.4px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+#train-logo-one {
+  position: absolute;
+  right: -50.6px;
+  bottom: 151.2px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
 .result {
   background-image: radial-gradient(#192b19, #0e1b0e) ;
   border-radius: 10px;
@@ -114,7 +131,7 @@ body {
   color: #01af0f;
   font-family: 'IBM Plex Mono', monospace;
   padding: 2%;
-  overflow-y: auto;
+  overflow-y: overlay;
   overflow-x: hidden;
 }
 
@@ -183,6 +200,11 @@ input::-webkit-inner-spin-button {
   background: #555;
 }
 
+::selection {
+  color:#192b19;
+  background: #01af0f;
+}
+
 .trolley {
   position: relative;
   margin-left:-20%;
@@ -195,28 +217,4 @@ input::-webkit-inner-spin-button {
   background-color: #a79175;
   border-style: inset;
   border-color: #927e64;
-}
-
-#train-logo-one {
-  position: absolute;
-  right: -2.6vw;
-  bottom: 16.2vh;
-  border-radius: 10px;
-  z-index: 1;
-}
-
-#train-logo-one {
-  position: absolute;
-  right: -2.6vw;
-  bottom: 16.2vh;
-  border-radius: 10px;
-  z-index: 1;
-}
-
-#train-logo-two {
-  position: absolute;
-  right: -2.6vw;
-  bottom: 24.5vw;
-  border-radius: 10px;
-  z-index: 1;
 }

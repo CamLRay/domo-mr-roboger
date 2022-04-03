@@ -82,11 +82,13 @@ function numberRange(input) {
     } else if (userNum.toLowerCase() === "help" || userNum.toLowerCase() === "hlp") {
       typingEffect('Type a Hindu-Arabic number to make me sing. Type "menu" for a list of commands.', 20);
     } else if (userNum.toLowerCase() === "menu" || userNum.toLowerCase() === "commands") {
-      typingEffect('</p><p>!: Type an exclamation point "!" before the number to reverse the song.</p> <p>?: Type a question mark "?" before the number to see the song at that number.</p><p>Set your user to have me include your name in the song.</p><p>trolley: Type "trolley" to say hi to the neighborhood trolley.');
+      typingEffect('</p><p>!: Type an exclamation point "!" before the number to reverse the song.</p> <p>?: Type a question mark "?" before the number to see the song at that number.</p><p>Set your user to have me include your name in the song.</p><p>trolley: Type "trolley" to say hi to the neighborhood trolley.</p><p> hello: Type hello to say hi to Mr. Robogers.');
     } else if (userNum.toLowerCase() === "trolley") {
       typingEffect("Mr. Robogers: Hello Mr. RoboTrolley.", 50);
       roboTrolley();
-    }else if (isNaN(userNum)) {
+    } else if (userNum.toLowerCase() === "hello") {
+      typingEffect("Mr. Robogers: Hello " + userName, 50);
+    } else if (isNaN(userNum)) {
       typingEffect("Mr. Robogers: Error neighbor! Beep! Boop! Please enter a number. Example: 25");
     } else {
       numArray = numberRange(parseInt(userNum));
