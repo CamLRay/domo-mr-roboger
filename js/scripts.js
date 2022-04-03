@@ -45,7 +45,7 @@ function numberRange(input) {
   }
 
   function roboTrolley() {
-    $(".trolley").removeClass("hidden").animate({left: '780px'},5000).queue(function(){
+    $(".trolley").removeClass("hidden").animate({left: '780px'},8000,"linear").queue(function(){
       $(".trolley").addClass("hidden").animate({left: '0'}).dequeue();
     });
   }
